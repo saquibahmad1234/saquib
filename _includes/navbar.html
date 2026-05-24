@@ -1,9 +1,11 @@
 <nav
   class="fixed top-0 left-0 w-full z-50 px-8 py-6 flex justify-between items-center"
 >
-  <a href="/" class="text-xl font-bold"> Saquib </a>
+  <a href="{{ '/index' | relative_url }}" class="text-xl font-bold"> Saquib </a>
 
   <div class="flex gap-8 text-sm">
+    <a href="{{ '/index' | relative_url }}">Home</a>
+
     <a href="{{ '/blogs' | relative_url }}">Blogs</a>
 
     <a href="{{ '/books' | relative_url }}">Books</a>
