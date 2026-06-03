@@ -1,0 +1,130 @@
+<section class="relative overflow-hidden bg-black py-24 lg:py-32">
+  <!-- BACKGROUND GLOW -->
+
+  <div
+    class="absolute left-1/2 top-[40%] w-[1200px] h-[700px] -translate-x-1/2 rounded-full bg-[#6B4DFF]/10 blur-[200px]"
+  ></div>
+
+  <div class="relative max-w-[1600px] mx-auto px-8 lg:px-16">
+    <!-- SECTION HEADER -->
+
+    <div class="mb-16">
+      <div
+        class="inline-flex items-center rounded-full bg-[#7C5CFF]/15 border border-[#7C5CFF]/30 px-5 py-2 text-[14px] tracking-[2px] uppercase text-[#C8B8FF]"
+      >
+        Featured Blogs
+      </div>
+
+      <h2 class="mt-6 text-[42px] md:text-[60px] leading-[1.05] text-white">
+        Thoughts, stories and observations.
+      </h2>
+    </div>
+
+    {% assign featured_posts = site.posts | where: "featured", true | where:
+    "type", "blog" | sort: "date" | reverse %}
+
+    <!-- MOBILE -->
+
+    <div
+      class="lg:hidden flex gap-5 overflow-x-auto pb-4 snap-x snap-mandatory"
+    >
+      {% for post in featured_posts limit:4 %}
+
+      <a
+        href="{{ post.url | relative_url }}"
+        class="group relative min-w-[260px] h-[380px] overflow-hidden rounded-[28px] snap-start"
+        data-aos="fade-up"
+      >
+        <!-- IMAGE -->
+
+        <img
+          src="{{ post.featured_image | relative_url }}"
+          alt="{{ post.title }}"
+          class="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-110"
+        />
+
+        <!-- OVERLAY -->
+
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-transparent"
+        ></div>
+
+        <!-- CONTENT -->
+
+        <div class="absolute bottom-0 left-0 p-6">
+          <div class="text-[14px] text-[#C8B8FF]">
+            {{ post.date | date: "%d %b %Y" }}
+          </div>
+
+          <h3
+            class="mt-2 text-[24px] leading-tight text-white font-medium max-w-[220px]"
+          >
+            {{ post.title }}
+          </h3>
+        </div>
+      </a>
+
+      {% endfor %}
+    </div>
+
+    <!-- DESKTOP -->
+
+    <div class="hidden lg:grid grid-cols-4 gap-8">
+      {% for post in featured_posts limit:4 %}
+
+      <a
+        href="{{ post.url | relative_url }}"
+        class="group relative h-[460px] overflow-hidden rounded-[32px]"
+        data-aos="fade-up"
+        data-aos-delay="{{ forloop.index0 | times: 150 }}"
+      >
+        <!-- IMAGE -->
+
+        <img
+          src="{{ post.featured_image | relative_url }}"
+          alt="{{ post.title }}"
+          class="absolute inset-0 w-full h-full object-cover transition duration-700 group-hover:scale-110"
+        />
+
+        <!-- DARK FADE -->
+
+        <div
+          class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"
+        ></div>
+
+        <!-- HOVER GLOW -->
+
+        <div
+          class="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500 bg-[#6B4DFF]/10"
+        ></div>
+
+        <!-- CONTENT -->
+
+        <div class="absolute bottom-0 left-0 p-8">
+          <div class="text-[15px] text-[#C8B8FF]">
+            {{ post.date | date: "%d %b %Y" }}
+          </div>
+
+          <h3
+            class="mt-2 text-[28px] leading-tight text-white font-medium max-w-[260px]"
+          >
+            {{ post.title }}
+          </h3>
+        </div>
+      </a>
+
+      {% endfor %}
+    </div>
+
+    <!-- VIEW ALL -->
+
+    <div class="mt-14 text-center">
+      <a
+        href="{{ '/blogs' | relative_url }}"
+        class="inline-flex text-[22px] text-[#D8D0EE] hover:text-white transition"
+      >
+        View All Blogs →
+      </a>
+    </div>
+  </div>
+</section>
