@@ -10,6 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css" />
 
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css" />
 
@@ -27,5 +28,14 @@
       type="module"
       src="{{ '/assets/dist/main.js' | relative_url }}"
     ></script>
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <script>
+      AOS.init({
+        once: false,
+        mirror: true,
+        duration: 1000,
+      });
+    </script>
   </body>
 </html>
