@@ -1,0 +1,158 @@
+<section
+  x-data="heroSlider()"
+  class="relative h-screen overflow-hidden bg-black"
+>
+  <!-- BACKGROUND -->
+
+  <div class="absolute inset-0 bg-black"></div>
+
+  <!-- SPOTLIGHT -->
+
+  <div
+    class="absolute top-[42%] w-[700px] h-[550px] -translate-x-1/2 -translate-y-1/2 rounded-full bg-[#6B4DFF]/45 blur-[130px] transition-all duration-[2000ms] ease-out"
+    :style="`left:${slides[activeSlide].glowX}`"
+  ></div>
+
+  <!-- VIGNETTE -->
+
+  <div
+    class="absolute inset-0 bg-[radial-gradient(circle_at_center,transparent_35%,rgba(0,0,0,0.75)_100%)]"
+  ></div>
+
+  <!-- FLOOR FADE -->
+
+  <div
+    class="absolute bottom-0 left-0 w-full h-[340px] bg-gradient-to-t from-black via-black to-transparent z-20"
+  ></div>
+
+  <!-- existing destop hero section-->
+
+  <div class="hidden lg:block">
+    <!-- SCENE -->
+
+    <div class="relative w-full h-full">
+      <!-- LEFT CONTENT -->
+
+      <div class="absolute left-[10%] top-[310px] w-[700px] h-[650px] z-40">
+        <div class="relative w-full h-full">
+          <template x-for="(slide,index) in slides" :key="index">
+            <div
+              x-cloak
+              x-show="activeSlide === index"
+              x-transition:enter="transition ease-out duration-700"
+              x-transition:enter-start="opacity-0 translate-y-3"
+              x-transition:enter-end="opacity-100 translate-y-0"
+              x-transition:leave="transition ease-in duration-900"
+              x-transition:leave-start="opacity-100 translate-y-0"
+              x-transition:leave-end="opacity-0 -translate-y-3"
+              class="absolute inset-0"
+            >
+              <h1
+                x-html="slide.title"
+                class="font-['Anton'] uppercase leading-[0.95] tracking-[-4px] text-[175px] h-[360px] bg-gradient-to-b from-white to-[#7C5CFF] bg-clip-text text-transparent"
+              ></h1>
+
+              <p
+                x-transition:enter.delay.150ms
+                x-text="slide.description"
+                class="mt-3 max-w-[520px] text-[24px] leading-[1.55] text-[#B7A9CC]"
+              ></p>
+            </div>
+          </template>
+        </div>
+      </div>
+    </div>
+
+    <!-- CHARACTER -->
+
+    <div class="absolute right-[18%] bottom-0 w-[860px] h-[930px] z-30">
+      <template x-for="(slide,index) in slides" :key="index">
+        <img
+          x-cloak
+          x-show="activeSlide === index"
+          :src="slide.image"
+          x-transition:enter="transition ease-out duration-700"
+          x-transition:enter-start="opacity-0 translate-y-8 scale-[1.03]"
+          x-transition:enter-end="opacity-100 translate-y-0 scale-100"
+          x-transition:leave="transition ease-in duration-700"
+          x-transition:leave-start="opacity-100 translate-y-0 scale-100"
+          x-transition:leave-end="opacity-0 -translate-y-8 scale-[0.97]"
+          class="absolute bottom-[45px] right-0 h-full object-contain"
+          style="
+            mask-image: linear-gradient(
+              to top,
+              transparent 0%,
+              rgba(0, 0, 0, 0.2) 6%,
+              rgba(0, 0, 0, 0.6) 14%,
+              black 24%
+            );
+
+            -webkit-mask-image: linear-gradient(
+              to top,
+              transparent 0%,
+              rgba(0, 0, 0, 0.2) 6%,
+              rgba(0, 0, 0, 0.6) 14%,
+              black 24%
+            );
+          "
+        />
+      </template>
+    </div>
+
+    <!-- TIMELINE -->
+
+    <div
+      class="absolute right-[8%] top-[50%] -translate-y-1/2 flex items-center gap-8 z-50"
+    >
+      <!-- LINE -->
+
+      <div class="relative w-[2px] h-[250px] bg-[#B7A9CC]/20">
+        <!-- DOT 1 -->
+
+        <div
+          class="absolute top-0 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full"
+          :class="activeSlide === 0 ? 'bg-white shadow-[0_0_35px_#ffffff]' : 'bg-[#B7A9CC]'"
+        ></div>
+
+        <!-- DOT 2 -->
+
+        <div
+          class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full"
+          :class="activeSlide === 1 ? 'bg-white shadow-[0_0_35px_#ffffff]' : 'bg-[#B7A9CC]'"
+        ></div>
+
+        <!-- DOT 3 -->
+
+        <div
+          class="absolute bottom-0 left-1/2 -translate-x-1/2 w-4 h-4 rounded-full"
+          :class="activeSlide === 2 ? 'bg-white shadow-[0_0_35px_#ffffff]' : 'bg-[#B7A9CC]'"
+        ></div>
+      </div>
+
+      <!-- LABELS -->
+
+      <div class="flex flex-col gap-[68px] text-[22px]">
+        <div
+          :class="activeSlide === 0 ? 'text-white font-semibold' : 'text-[#B7A9CC]'"
+        >
+          01<br />
+          Blogs
+        </div>
+
+        <div
+          :class="activeSlide === 1 ? 'text-white font-semibold' : 'text-[#B7A9CC]'"
+        >
+          02<br />
+          Books
+        </div>
+
+        <div
+          :class="activeSlide === 2 ? 'text-white font-semibold' : 'text-[#B7A9CC]'"
+        >
+          03<br />
+          Consult
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

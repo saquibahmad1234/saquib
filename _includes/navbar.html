@@ -1,17 +1,109 @@
 <nav
-  class="fixed top-0 left-0 w-full z-50 px-8 py-6 flex justify-between items-center"
+  x-data="{ mobileMenu:false }"
+  class="fixed top-0 left-0 w-full z-50 px-6 lg:px-10 py-6 lg:py-8"
 >
-  <a href="{{ '/index' | relative_url }}" class="text-xl font-bold"> Saquib </a>
+  <div class="max-w-[1600px] mx-auto">
+    <div class="flex items-center justify-between">
+      <!-- LOGO -->
 
-  <div class="flex gap-8 text-sm">
-    <a href="{{ '/index' | relative_url }}">Home</a>
+      <a
+        href="{{ '/' | relative_url }}"
+        class="text-[20px] lg:text-[24px] font-medium text-[#F5F1FF]"
+      >
+        Syed Saquib Ahmad
+      </a>
 
-    <a href="{{ '/blogs' | relative_url }}">Blogs</a>
+      <!-- DESKTOP NAV -->
 
-    <a href="{{ '/books' | relative_url }}">Books</a>
+      <div class="hidden lg:flex items-center gap-10">
+        <a
+          href="{{ '/' | relative_url }}"
+          class="text-[24px] font-medium {% if page.title == 'Home' %}text-white{% else %}text-[#B7A9CC]{% endif %}"
+        >
+          Home
+        </a>
 
-    <a href="{{ '/consultancy' | relative_url }}">Consultancy</a>
+        <a
+          href="{{ '/blogs' | relative_url }}"
+          class="text-[24px] font-medium {% if page.title == 'Blogs' %}text-white{% else %}text-[#B7A9CC]{% endif %}"
+        >
+          Blogs
+        </a>
 
-    <a href="{{ '/connect' | relative_url }}">Let's Connect</a>
+        <a
+          href="{{ '/books' | relative_url }}"
+          class="text-[24px] font-medium {% if page.title == 'Books' %}text-white{% else %}text-[#B7A9CC]{% endif %}"
+        >
+          Books
+        </a>
+
+        <a
+          href="{{ '/consultancy' | relative_url }}"
+          class="text-[24px] font-medium {% if page.title == 'Consultancy' %}text-white{% else %}text-[#B7A9CC]{% endif %}"
+        >
+          Consultancy
+        </a>
+
+        <a
+          href="{{ '/connect' | relative_url }}"
+          class="border border-[#7C5CFF] rounded-full px-6 py-3 text-[18px] font-medium text-[#F5F1FF]"
+        >
+          Let's Connect
+        </a>
+      </div>
+
+      <!-- MOBILE HAMBURGER -->
+
+      <button
+        @click="mobileMenu = !mobileMenu"
+        class="lg:hidden flex flex-col gap-[5px]"
+      >
+        <span class="w-8 h-[2px] bg-white"></span>
+        <span class="w-8 h-[2px] bg-white"></span>
+        <span class="w-8 h-[2px] bg-white"></span>
+      </button>
+    </div>
+
+    <!-- MOBILE MENU -->
+
+    <div
+      x-show="mobileMenu"
+      x-transition
+      @click.outside="mobileMenu=false"
+      class="lg:hidden mt-6 rounded-3xl border border-[#7C5CFF]/30 bg-black/95 backdrop-blur-md p-6"
+    >
+      <div class="flex flex-col gap-6 text-center">
+        <a href="{{ '/' | relative_url }}" class="text-[20px] text-[#F5F1FF]">
+          Home
+        </a>
+        <a
+          href="{{ '/blogs' | relative_url }}"
+          class="text-[20px] text-[#F5F1FF]"
+        >
+          Blogs
+        </a>
+
+        <a
+          href="{{ '/books' | relative_url }}"
+          class="text-[20px] text-[#F5F1FF]"
+        >
+          Books
+        </a>
+
+        <a
+          href="{{ '/consultancy' | relative_url }}"
+          class="text-[20px] text-[#F5F1FF]"
+        >
+          Consultancy
+        </a>
+
+        <a
+          href="{{ '/connect' | relative_url }}"
+          class="border border-[#7C5CFF] rounded-full py-3 text-[#F5F1FF]"
+        >
+          Let's Connect
+        </a>
+      </div>
+    </div>
   </div>
 </nav>

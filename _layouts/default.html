@@ -3,18 +3,29 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:wght@400;500&display=swap"
       rel="stylesheet"
-      href="{{ '/assets/css/input.css' | relative_url }}"
     />
+
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css" />
 
     <title>{{ page.title }}</title>
   </head>
 
-  <body class="bg-black text-white">
+  <body
+    data-baseurl="{{ site.baseurl }}"
+    class="bg-black text-[#F5F1FF] font-['Inter'] overflow-x-hidden"
+  >
     {% include navbar.html %}
 
     <main>{{ content }}</main>
+    <script
+      type="module"
+      src="{{ '/assets/dist/main.js' | relative_url }}"
+    ></script>
   </body>
 </html>
