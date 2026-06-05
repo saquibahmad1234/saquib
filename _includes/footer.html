@@ -1,0 +1,117 @@
+<footer class="relative overflow-hidden bg-black border-t border-white/5">
+  <!-- SUBTLE GLOW -->
+
+  <div
+    class="absolute left-1/2 top-0 w-[1200px] h-[500px] -translate-x-1/2 rounded-full bg-[#6B4DFF]/5 blur-[250px]"
+  ></div>
+
+  <div
+    class="relative z-20 max-w-[1600px] mx-auto px-8 lg:px-16 py-16 lg:py-24"
+  >
+    <div class="grid lg:grid-cols-3 gap-16">
+      <!-- BRAND -->
+
+      <div>
+        <h3 class="text-[32px] text-white font-medium">Syed Saquib Ahmad</h3>
+
+        <p class="mt-6 max-w-[420px] text-[18px] leading-[1.8] text-[#B7A9CC]">
+          Writer, author and tax consultant helping people make better financial
+          decisions and live more meaningful lives.
+        </p>
+      </div>
+
+      <!-- NAVIGATION -->
+
+      <div>
+        <h4 class="text-white text-[18px] uppercase tracking-[2px]">
+          Navigation
+        </h4>
+
+        <div class="mt-6 flex flex-col gap-4">
+          <a
+            href="{{ '/' | relative_url }}"
+            class="text-[#B7A9CC] hover:text-white transition"
+          >
+            Home
+          </a>
+
+          <a
+            href="{{ '/blogs' | relative_url }}"
+            class="text-[#B7A9CC] hover:text-white transition"
+          >
+            Blogs
+          </a>
+
+          <a
+            href="{{ '/books' | relative_url }}"
+            class="text-[#B7A9CC] hover:text-white transition"
+          >
+            Books
+          </a>
+
+          <a
+            href="{{ '/consultancy' | relative_url }}"
+            class="text-[#B7A9CC] hover:text-white transition"
+          >
+            Consultancy
+          </a>
+
+          <a
+            href="{{ '/courses' | relative_url }}"
+            class="text-[#B7A9CC] hover:text-white transition"
+          >
+            Courses
+          </a>
+        </div>
+      </div>
+
+      <!-- CONNECT -->
+
+      <div>
+        <h4 class="text-white text-[18px] uppercase tracking-[2px]">Connect</h4>
+
+        <div class="mt-6 flex flex-col gap-4">
+          <a
+            href="mailto:saquib.ahmad1234@gmail.com"
+            class="text-[#B7A9CC] hover:text-white transition"
+          >
+            saquib.ahmad1234@gmail.com
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/syed-saquib-ahmad/"
+            class="text-[#B7A9CC] hover:text-white transition"
+          >
+            LinkedIn
+          </a>
+
+          <a
+            href="https://www.instagram.com/financewithsaquib/"
+            class="text-[#B7A9CC] hover:text-white transition"
+          >
+            Instagram
+          </a>
+
+          <a
+            href="https://x.com/itssaquibahmad/"
+            class="text-[#B7A9CC] hover:text-white transition"
+          >
+            X / Twitter
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- BOTTOM -->
+
+    <div
+      class="mt-16 pt-8 border-t border-white/5 flex flex-col lg:flex-row items-center justify-between gap-4"
+    >
+      <div class="text-[#7E7595] text-[15px]">
+        © {{ site.time | date: '%Y' }} Syed Saquib Ahmad. All rights reserved.
+      </div>
+
+      <div class="text-[#7E7595] text-[15px]">syedsaquibahmad.com</div>
+    </div>
+  </div>
+</footer>
