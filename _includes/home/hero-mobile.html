@@ -52,63 +52,63 @@
         x-text="slides[activeSlide].description"
         class="mt-2 max-w-[290px] mx-auto text-[18px] leading-[1.6] text-[#B7A9CC]"
       ></p>
-    </div>
-  </div>
-</div>
 
-<!-- MOBILE TIMELINE -->
+      <!-- MOBILE TIMELINE -->
 
-<div class="absolute bottom-[130px] left-1/2 -translate-x-1/2 w-[300px] z-50">
-  <!-- LINE -->
+      <div class="mt-10 w-[300px] mx-auto">
+        <!-- LINE -->
 
-  <div class="relative h-[2px] bg-[#8E7BC5]/60">
-    <!-- DOT 1 -->
+        <div class="relative h-[2px] bg-[#8E7BC5]/60">
+          <!-- DOT 1 -->
 
-    <button
-      @click="activeSlide = 0"
-      class="absolute left-0 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full transition-all duration-500"
-      :class="activeSlide === 0
-      ? 'bg-white shadow-[0_0_35px_#7C5CFF]'
-      : 'bg-[#9B87C9]'"
-    ></button>
+          <button
+            @click="activeSlide = 0"
+            class="absolute left-0 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full transition-all duration-500"
+            :class="activeSlide === 0
+            ? 'bg-white shadow-[0_0_35px_#7C5CFF]'
+            : 'bg-[#9B87C9]'"
+          ></button>
 
-    <!-- DOT 2 -->
+          <!-- DOT 2 -->
 
-    <button
-      @click="activeSlide = 1"
-      class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full transition-all duration-500"
-      :class="activeSlide === 1
-      ? 'bg-white shadow-[0_0_35px_#7C5CFF]'
-      : 'bg-[#9B87C9]'"
-    ></button>
+          <button
+            @click="activeSlide = 1"
+            class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 rounded-full transition-all duration-500"
+            :class="activeSlide === 1
+            ? 'bg-white shadow-[0_0_35px_#7C5CFF]'
+            : 'bg-[#9B87C9]'"
+          ></button>
 
-    <!-- DOT 3 -->
+          <!-- DOT 3 -->
 
-    <button
-      @click="activeSlide = 2"
-      class="absolute right-0 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full transition-all duration-500"
-      :class="activeSlide === 2
-      ? 'bg-white shadow-[0_0_35px_#7C5CFF]'
-      : 'bg-[#9B87C9]'"
-    ></button>
-  </div>
+          <button
+            @click="activeSlide = 2"
+            class="absolute right-0 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full transition-all duration-500"
+            :class="activeSlide === 2
+            ? 'bg-white shadow-[0_0_35px_#7C5CFF]'
+            : 'bg-[#9B87C9]'"
+          ></button>
+        </div>
 
-  <!-- LABELS -->
+        <!-- LABELS -->
 
-  <div class="flex justify-between mt-3 text-center">
-    <div>
-      <div class="text-[16px]">01</div>
-      <div class="text-[16px]">Blogs</div>
-    </div>
+        <div class="flex justify-between mt-4 text-center">
+          <div>
+            <div class="text-[16px]">01</div>
+            <div class="text-[16px]">Blogs</div>
+          </div>
 
-    <div>
-      <div class="text-[16px]">02</div>
-      <div class="text-[16px]">Books</div>
-    </div>
+          <div>
+            <div class="text-[16px]">02</div>
+            <div class="text-[16px]">Books</div>
+          </div>
 
-    <div>
-      <div class="text-[16px]">03</div>
-      <div class="text-[16px]">Consult</div>
+          <div>
+            <div class="text-[16px]">03</div>
+            <div class="text-[16px]">Consult</div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
