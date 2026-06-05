@@ -830,6 +830,10 @@ video {
   height: 100vh;
 }
 
+.h-\[900px\] {
+  height: 900px;
+}
+
 .max-h-\[820px\] {
   max-height: 820px;
 }
