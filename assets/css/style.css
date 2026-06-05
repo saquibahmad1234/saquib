@@ -680,6 +680,10 @@ video {
   top: 70px;
 }
 
+.bottom-\[20px\] {
+  bottom: 20px;
+}
+
 .z-20 {
   z-index: 20;
 }
@@ -840,6 +844,10 @@ video {
 
 .max-h-\[820px\] {
   max-height: 820px;
+}
+
+.max-h-\[800px\] {
+  max-height: 800px;
 }
 
 .min-h-screen {
