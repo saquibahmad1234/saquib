@@ -688,6 +688,10 @@ video {
   top: 70px;
 }
 
+.top-\[360px\] {
+  top: 360px;
+}
+
 .z-0 {
   z-index: 0;
 }
@@ -872,6 +876,10 @@ video {
 
 .min-h-screen {
   min-height: 100vh;
+}
+
+.min-h-\[950px\] {
+  min-height: 950px;
 }
 
 .w-4 {
