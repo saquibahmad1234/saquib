@@ -3,6 +3,615 @@ layout: default
 title: Books
 ---
 
-<section class="pt-40 px-8">
-  <h1 class="text-5xl font-bold mb-10">Books</h1>
+<section class="relative overflow-hidden pt-24 lg:pt-40 pb-0 lg:pb-16">
+  <!-- BACKGROUND GLOW -->
+
+  <div
+    class="absolute left-1/2 top-[30%] -translate-x-1/2 w-[1100px] h-[700px] rounded-full bg-[#6B4DFF]/20 blur-[180px]"
+  ></div>
+
+  <div class="relative max-w-[1500px] mx-auto px-6 lg:px-16">
+    <div class="grid lg:grid-cols-2 items-center gap-12 lg:gap-20">
+      <!-- LEFT CONTENT -->
+
+      <div class="text-center lg:text-left" data-aos="fade-right">
+        <div
+          class="inline-flex items-center rounded-full bg-[#7C5CFF]/15 border border-[#7C5CFF]/30 px-5 py-2 text-[14px] tracking-[2px] uppercase text-[#C8B8FF]"
+        >
+          Books
+        </div>
+
+        <h1
+          class="mt-8 text-[58px] md:text-[90px] lg:text-[110px] leading-[0.9] tracking-[-3px] font-['Cormorant_Garamond'] text-white"
+        >
+          Stories that<br />
+          stay with you.
+        </h1>
+
+        <p
+          class="mt-8 text-[20px] md:text-[26px] leading-[1.8] text-[#B7A9CC] max-w-[650px] mx-auto lg:mx-0"
+        >
+          Books have shaped the way I think, decide and grow. Here I share the
+          ones that left a mark — with notes, reflections and ideas worth
+          carrying.
+        </p>
+        <!-- MOBILE CHARACTER -->
+
+        <div class="lg:hidden flex justify-center mt-12 -mb-4">
+          <div class="relative">
+            <div
+              class="absolute inset-0 bg-[#7C5CFF]/40 blur-[90px] rounded-full"
+            ></div>
+
+            <!-- MOBILE STARS -->
+
+            <div
+              class="absolute left-[-10px] top-[25%] text-[#A98CFF] text-[18px] animate-pulse"
+            >
+              ✦
+            </div>
+
+            <div
+              class="absolute right-[-15px] top-[35%] text-[#A98CFF] text-[14px] animate-pulse"
+              style="animation-delay: 0.8s"
+            >
+              ✦
+            </div>
+
+            <div
+              class="absolute left-[15%] bottom-[18%] text-[#A98CFF] text-[12px] animate-pulse"
+              style="animation-delay: 1.5s"
+            >
+              ✦
+            </div>
+
+            <img
+              src="{{ '/assets/images/character-books.png' | relative_url }}"
+              alt="Books Character"
+              class="relative w-[280px] object-contain z-10"
+            />
+          </div>
+        </div>
+
+        <!-- FEATURES -->
+
+        <div
+          class="mt-12 lg:mt-12 grid grid-cols-3 lg:grid-cols-3 gap-4 lg:gap-6 text-center lg:text-left"
+        >
+          <!-- BOOK REVIEWS -->
+
+          <div class="flex flex-col items-center lg:items-start">
+            <svg
+              class="w-9 h-9 lg:w-12 lg:h-12 text-[#A98CFF]"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M11 4.717c-2.286-.58-4.16-.756-7.045-.71A1.99 1.99 0 0 0 2 6v11c0 1.133.934 2.022 2.044 2.007 2.759-.038 4.5.16 6.956.791V4.717Zm2 15.081c2.456-.631 4.198-.829 6.956-.791A2.013 2.013 0 0 0 22 16.999V6a1.99 1.99 0 0 0-1.955-1.993c-2.885-.046-4.76.13-7.045.71v15.081Z"
+                clip-rule="evenodd"
+              />
+            </svg>
+
+            <div class="mt-3 text-white font-medium text-[15px] lg:text-[18px]">
+              Reviews
+            </div>
+
+            <div class="hidden lg:block mt-1 text-sm text-[#B7A9CC]">
+              Honest and thoughtful reviews.
+            </div>
+          </div>
+
+          <!-- READING NOTES -->
+
+          <div class="flex flex-col items-center lg:items-start">
+            <svg
+              class="w-9 h-9 lg:w-12 lg:h-12 text-[#A98CFF]"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m4.988 19.012 5.41-5.41m2.366-6.424 4.058 4.058-2.03 5.41L5.3 20 4 18.701l3.355-9.494 5.41-2.029Zm4.626 4.625L12.197 6.61 14.807 4 20 9.194l-2.61 2.61Z"
+              />
+            </svg>
+
+            <div class="mt-3 text-white font-medium text-[15px] lg:text-[18px]">
+              Notes
+            </div>
+
+            <div class="hidden lg:block mt-1 text-sm text-[#B7A9CC]">
+              Lessons and ideas worth keeping.
+            </div>
+          </div>
+
+          <!-- REFLECTIONS -->
+
+          <div class="flex flex-col items-center lg:items-start">
+            <svg
+              class="w-9 h-9 lg:w-12 lg:h-12 text-[#A98CFF]"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-width="2"
+                d="M8.737 8.737a21.49 21.49 0 0 1 3.308-2.724m0 0c3.063-2.026 5.99-2.641 7.331-1.3 1.827 1.828.026 6.591-4.023 10.64-4.049 4.049-8.812 5.85-10.64 4.023-1.33-1.33-.736-4.218 1.249-7.253m6.083-6.11c-3.063-2.026-5.99-2.641-7.331-1.3-1.827 1.828-.026 6.591 4.023 10.64m3.308-9.34a21.497 21.497 0 0 1 3.308 2.724m2.775 3.386c1.985 3.035 2.579 5.923 1.248 7.253-1.336 1.337-4.245.732-7.295-1.275M14 12a2 2 0 1 1-4 0 2 2 0 0 1 4 0Z"
+              />
+            </svg>
+
+            <div class="mt-3 text-white font-medium text-[15px] lg:text-[18px]">
+              Thoughts
+            </div>
+
+            <div class="hidden lg:block mt-1 text-sm text-[#B7A9CC]">
+              Thoughts inspired by great books.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT SIDE -->
+
+      <div class="relative flex justify-center" data-aos="fade-left">
+        <!-- MAIN GLOW -->
+
+        <div
+          class="absolute w-[500px] h-[500px] rounded-full bg-[#7C5CFF]/60 blur-[120px]"
+        ></div>
+
+        <!-- FLOATING STARS -->
+
+        <div
+          class="hidden lg:block absolute top-[10%] left-[15%] text-[#A98CFF] text-[22px]"
+        >
+          ✦
+        </div>
+
+        <div
+          class="hidden lg:block absolute top-[25%] left-[8%] text-[#A98CFF] text-[22px]"
+        >
+          ✦
+        </div>
+
+        <div
+          class="hidden lg:block absolute top-[12%] right-[25%] text-[#A98CFF] text-[22px]"
+        >
+          ✦
+        </div>
+
+        <!-- NOTE -->
+
+        <div
+          class="absolute right-[-5%] top-[13%] max-w-[220px] rotate-[-6deg] text-[#D9CCFF] text-[28px] hidden lg:block z-0"
+          style="font-family: &quot;Caveat&quot;, cursive"
+        >
+          Good books don't just entertain, they expand your mind and stay with
+          you forever.
+        </div>
+
+        <!-- CHARACTER -->
+
+        <img
+          src="{{ '/assets/images/character-books.png' | relative_url }}"
+          alt="Books Character"
+          class="hidden lg:block relative z-10 w-[680px] object-contain"
+        />
+      </div>
+    </div>
+  </div>
+
+  <!-- GLASS STATS BAR -->
+
+  <div
+    class="relative mt-16 lg:-mt-8 rounded-[36px] border border-white/10 bg-white/[0.03] backdrop-blur-2xl overflow-hidden shadow-[0_20px_80px_rgba(0,0,0,0.55)]"
+    data-aos="fade-up"
+  >
+    <!-- GLASS HIGHLIGHT -->
+
+    <div
+      class="absolute inset-0 bg-gradient-to-b from-white/[0.06] via-transparent to-transparent pointer-events-none"
+    ></div>
+
+    <!-- SUBTLE PURPLE GLOW -->
+
+    <div
+      class="absolute left-1/2 top-0 -translate-x-1/2 w-[700px] h-[180px] bg-[#7C5CFF]/10 blur-[120px] pointer-events-none"
+    ></div>
+
+    <div class="grid grid-cols-2 lg:grid-cols-4">
+      <!-- BOOKS READ -->
+
+      <div class="p-8 lg:p-10 text-center">
+        <div class="flex justify-center mb-5">
+          <svg
+            class="w-9 h-9 text-[#A98CFF]"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M11 4.717c-2.286-.58-4.16-.756-7.045-.71A1.99 1.99 0 0 0 2 6v11c0 1.133.934 2.022 2.044 2.007 2.759-.038 4.5.16 6.956.791V4.717Zm2 15.081c2.456-.631 4.198-.829 6.956-.791A2.013 2.013 0 0 0 22 16.999V6a1.99 1.99 0 0 0-1.955-1.993c-2.885-.046-4.76.13-7.045.71v15.081Z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </div>
+
+        <div class="text-[42px] font-semibold text-white leading-none">50+</div>
+
+        <div class="mt-3 text-[#B7A9CC] text-[15px]">Books Read</div>
+      </div>
+
+      <!-- REVIEWS -->
+
+      <div class="p-8 lg:p-10 text-center border-l border-white/5">
+        <div class="flex justify-center mb-5">
+          <svg
+            class="w-9 h-9 text-[#A98CFF]"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke="currentColor"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M10.779 17.779 4.36 19.918 6.5 13.5m4.279 4.279 8.364-8.643a3.027 3.027 0 0 0-2.14-5.165 3.03 3.03 0 0 0-2.14.886L6.5 13.5m4.279 4.279L6.499 13.5"
+            />
+          </svg>
+        </div>
+
+        <div class="text-[42px] font-semibold text-white leading-none">15+</div>
+
+        <div class="mt-3 text-[#B7A9CC] text-[15px]">Reviews Written</div>
+      </div>
+
+      <!-- FIVE STAR -->
+
+      <div class="p-8 lg:p-10 text-center border-l border-white/5">
+        <div class="flex justify-center mb-5">
+          <svg
+            class="w-9 h-9 text-[#A98CFF]"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M13.849 4.22c-.684-1.626-3.014-1.626-3.698 0L8.397 8.387l-4.552.361c-1.775.14-2.495 2.331-1.142 3.477l3.468 2.937-1.06 4.392c-.413 1.713 1.472 3.067 2.992 2.149L12 19.35l3.897 2.354c1.52.918 3.405-.436 2.992-2.15l-1.06-4.39 3.468-2.938c1.353-1.146.633-3.336-1.142-3.477l-4.552-.36-1.754-4.17Z"
+            />
+          </svg>
+        </div>
+
+        <div class="text-[42px] font-semibold text-white leading-none">10+</div>
+
+        <div class="mt-3 text-[#B7A9CC] text-[15px]">Five-Star Reads</div>
+      </div>
+
+      <!-- YEARS -->
+
+      <div class="p-8 lg:p-10 text-center border-l border-white/5">
+        <div class="flex justify-center mb-5">
+          <svg
+            class="w-9 h-9 text-[#A98CFF]"
+            xmlns="http://www.w3.org/2000/svg"
+            fill="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10S2 17.523 2 12Zm11-4a1 1 0 1 0-2 0v4a1 1 0 0 0 .293.707l3 3a1 1 0 0 0 1.414-1.414L13 11.586V8Z"
+              clip-rule="evenodd"
+            />
+          </svg>
+        </div>
+
+        <div class="text-[42px] font-semibold text-white leading-none">5+</div>
+
+        <div class="mt-3 text-[#B7A9CC] text-[15px]">Years Reading</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION FADE -->
+
+  <div
+    class="absolute bottom-0 left-0 w-full h-[220px] pointer-events-none"
+    style="
+      background: linear-gradient(
+        to bottom,
+        transparent 0%,
+        rgba(0, 0, 0, 0.15) 20%,
+        rgba(0, 0, 0, 0.45) 50%,
+        rgba(0, 0, 0, 0.8) 80%,
+        black 100%
+      );
+    "
+  ></div>
+</section>
+
+{% include home/book-section.html %}
+
+<section class="relative overflow-hidden py-24">
+  <!-- BACKGROUND GLOW -->
+
+  <div
+    class="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[900px] h-[400px] rounded-full bg-[#6B4DFF]/12 blur-[160px]"
+  ></div>
+
+  <!-- FLOATING STARS -->
+
+  <div class="absolute left-[12%] top-[25%] text-[#A98CFF]/50 text-[10px]">
+    ✦
+  </div>
+
+  <div class="absolute left-[20%] top-[60%] text-[#A98CFF]/40 text-[8px]">
+    ✦
+  </div>
+
+  <div class="absolute left-[35%] top-[18%] text-[#A98CFF]/30 text-[12px]">
+    ✦
+  </div>
+
+  <div class="absolute right-[22%] top-[28%] text-[#A98CFF]/50 text-[10px]">
+    ✦
+  </div>
+
+  <div class="absolute right-[15%] top-[50%] text-[#A98CFF]/30 text-[8px]">
+    ✦
+  </div>
+
+  <div class="absolute right-[30%] bottom-[25%] text-[#A98CFF]/40 text-[10px]">
+    ✦
+  </div>
+
+  <div class="absolute left-[45%] top-[10%] text-[#A98CFF]/50 text-[12px]">
+    ✦
+  </div>
+
+  <div class="relative max-w-[1000px] mx-auto px-8 text-center">
+    <!-- DECORATIVE STAR -->
+
+    <div class="text-[#A98CFF] text-[28px] mb-10">✦</div>
+
+    <!-- QUOTE -->
+
+    <blockquote
+      class="font-['Cormorant_Garamond'] text-[28px] md:text-[36px] lg:text-[46px] leading-[1.5] max-w-[900px] mx-auto text-[#E8E1F8]"
+    >
+      “Books have been my escape, my teacher, my mirror, and sometimes my home.
+      The ones you'll find here are the stories that stayed.”
+    </blockquote>
+
+    <!-- AUTHOR -->
+
+    <div class="mt-8 text-[#B7A9CC] tracking-[4px] uppercase text-[12px]">
+      — Syed Saquib Ahmad
+    </div>
+
+    <!-- DECORATIVE LINE -->
+
+    <div
+      class="mt-10 mx-auto w-[120px] h-px bg-gradient-to-r from-transparent via-[#7C5CFF]/60 to-transparent"
+    ></div>
+  </div>
+</section>
+
+<!-- 5Star read section -->
+<section class="pt-10 pb-24">
+  <div class="max-w-[1400px] mx-auto px-6 lg:px-16">
+    <!-- HEADING -->
+
+    <div class="text-center mb-16" data-aos="fade-up">
+      <div
+        class="inline-flex items-center rounded-full bg-[#7C5CFF]/15 border border-[#7C5CFF]/30 px-5 py-2 text-[14px] tracking-[2px] uppercase text-[#C8B8FF]"
+      >
+        ★★★★★ Five-Star Reads
+      </div>
+
+      <h2
+        class="mt-8 font-['Cormorant_Garamond'] text-[44px] md:text-[58px] lg:text-[72px] text-white leading-[1.1]"
+      >
+        The books that stayed.
+      </h2>
+
+      <p
+        class="mt-5 max-w-[650px] mx-auto text-[18px] md:text-[20px] text-[#B7A9CC] leading-[1.8]"
+      >
+        Some books entertain. These are the ones that quietly changed the way I
+        think, feel and see the world.
+      </p>
+    </div>
+
+    <!-- BOOK GRID -->
+
+    {% assign five_star_books = site.posts | where:"type","book-review" |
+    sort:"date" | reverse %}
+
+    <div class="grid grid-cols-2 lg:grid-cols-5 gap-6 lg:gap-8">
+      {% for post in five_star_books limit:5 %} {% if post.rating == 5 or
+      post.rating == "5" %}
+
+      <!-- card -->
+
+      {% endif %}
+      <a
+        href="{{ post.url | relative_url }}"
+        class="group relative overflow-hidden rounded-[24px] border border-white/10 bg-[#05030B] transition duration-500 hover:-translate-y-2 hover:border-[#7C5CFF]/40"
+      >
+        <!-- COVER -->
+
+        <div class="relative h-[340px] lg:h-[380px] overflow-hidden">
+          <img
+            src="{{ post.book_cover | relative_url }}"
+            alt="{{ post.title }}"
+            class="w-full h-full object-cover transition duration-700 group-hover:scale-105"
+          />
+          <!-- FADE -->
+
+          <div
+            class="absolute bottom-0 left-0 w-full h-[120px]"
+            style="
+              background: linear-gradient(
+                to bottom,
+                transparent,
+                rgba(5, 3, 11, 0.75) 60%,
+                #05030b 100%
+              );
+            "
+          ></div>
+        </div>
+
+        <!-- INFO -->
+
+        <div class="px-5 pb-5 -mt-8 relative z-10">
+          <h3 class="text-[20px] text-white leading-tight">{{ post.title }}</h3>
+
+          <div class="mt-2 text-[14px] text-[#A98CFF]">{{ post.author }}</div>
+
+          <div class="mt-3 text-[#FFD166] text-[16px] tracking-[2px]">
+            ★★★★★
+          </div>
+        </div>
+      </a>
+
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- ========================================= -->
+<!-- SEARCH + ALL BOOK REVIEWS -->
+<!-- ========================================= -->
+
+<section id="all-book-reviews" class="py-24">
+  <div class="max-w-[1600px] mx-auto px-6 lg:px-16">
+    <!-- HEADER -->
+
+    <div class="text-center" data-aos="fade-up">
+      <div
+        class="inline-flex items-center rounded-full bg-[#7C5CFF]/15 border border-[#7C5CFF]/30 px-5 py-2 text-[14px] tracking-[2px] uppercase text-[#C8B8FF]"
+      >
+        Bookshelf
+      </div>
+
+      <h2
+        class="mt-8 font-['Cormorant_Garamond'] text-[44px] md:text-[60px] lg:text-[72px] text-white leading-[1.1]"
+      >
+        Every Book I've Reviewed
+      </h2>
+
+      <p
+        class="mt-5 max-w-[700px] mx-auto text-[18px] text-[#B7A9CC] leading-[1.8]"
+      >
+        Search through reviews, notes and reflections from books that shaped my
+        thinking.
+      </p>
+    </div>
+
+    <!-- SEARCH -->
+
+    <div class="mt-14" data-aos="fade-up">
+      <div class="relative max-w-[1500px] mx-auto">
+        <input
+          id="bookSearch"
+          type="text"
+          placeholder="Search books, authors and reflections..."
+          class="w-full h-[82px] rounded-full border border-[#7C5CFF]/20 bg-[#05030B]/90 backdrop-blur-xl px-8 pr-24 text-[20px] text-white placeholder:text-[#8B7DAA] focus:outline-none focus:border-[#7C5CFF]/60 transition"
+        />
+
+        <button
+          type="button"
+          class="absolute right-3 top-1/2 -translate-y-1/2 w-[58px] h-[58px] rounded-full border border-[#7C5CFF]/30 bg-[#7C5CFF]/10 flex items-center justify-center text-[#A98CFF] hover:bg-[#7C5CFF]/20 transition"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="26"
+            height="26"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="m21 21-4.35-4.35M10.5 18a7.5 7.5 0 1 1 0-15 7.5 7.5 0 0 1 0 15Z"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- BOOKSHELF -->
+
+    {% assign book_reviews = site.posts | where:"type","book-review" |
+    sort:"date" | reverse %}
+
+    <div
+      id="bookshelfGrid"
+      class="mt-20 grid grid-cols-2 md:grid-cols-4 lg:grid-cols-5 gap-x-8 gap-y-16"
+    >
+      {% for post in book_reviews %}
+
+      <a
+        href="{{ post.url | relative_url }}"
+        class="book-item group"
+        data-title="{{ post.title | downcase }}"
+        data-author="{{ post.author | downcase }}"
+        data-note="{{ post.featured_note | downcase }}"
+      >
+        <!-- BOOK -->
+
+        <div class="relative">
+          <!-- COVER -->
+
+          <div
+            class="overflow-hidden rounded-[20px] border border-white/10 bg-[#05030B]"
+          >
+            <img
+              src="{{ post.book_cover | relative_url }}"
+              alt="{{ post.title }}"
+              class="w-full aspect-[2/3] object-cover transition duration-700 group-hover:-translate-y-3 group-hover:scale-[1.03]"
+            />
+          </div>
+
+          <!-- SHELF -->
+
+          <div
+            class="absolute -bottom-4 left-1/2 -translate-x-1/2 w-[90%] h-[8px] rounded-full bg-[#7C5CFF]/20 blur-sm"
+          ></div>
+        </div>
+
+        <!-- DETAILS -->
+
+        <div class="mt-6 text-center">
+          <h3
+            class="text-white text-[18px] leading-tight group-hover:text-[#C8B8FF] transition"
+          >
+            {{ post.title }}
+          </h3>
+
+          <div class="mt-2 text-[#A98CFF] text-sm">{{ post.author }}</div>
+
+          {% if post.rating %}
+          <div class="mt-3 text-[#FFD166] text-[14px] tracking-[2px]">
+            {% for i in (1..post.rating) %}★{% endfor %}
+          </div>
+          {% endif %}
+        </div>
+      </a>
+
+      {% endfor %}
+    </div>
+  </div>
 </section>
