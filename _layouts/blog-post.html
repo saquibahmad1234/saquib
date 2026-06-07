@@ -1,0 +1,250 @@
+---
+layout: default
+---
+
+<!-- DESKTOP -->
+
+<div class="hidden lg:block">
+  <!-- HERO WRAPPER -->
+
+  <section class="relative h-[110vh] blog-hero">
+    <!-- STICKY IMAGE -->
+
+    <div class="sticky top-[90px] h-[85vh] overflow-hidden">
+      <img
+        src="{{ page.featured_image | relative_url }}"
+        alt="{{ page.title }}"
+        class="blog-hero-image w-full h-full object-cover"
+      />
+
+      <!-- BOTTOM FADE -->
+
+      <div
+        class="absolute bottom-0 left-0 w-full h-[280px] pointer-events-none"
+        style="
+          background: linear-gradient(
+            to bottom,
+            transparent 0%,
+            rgba(0, 0, 0, 0.15) 25%,
+            rgba(0, 0, 0, 0.45) 55%,
+            rgba(0, 0, 0, 0.8) 80%,
+            black 100%
+          );
+        "
+      ></div>
+
+      <!-- SCROLL OVERLAY -->
+
+      <div class="blog-hero-overlay absolute inset-0"></div>
+    </div>
+  </section>
+
+  <!-- TITLE SECTION -->
+
+  <section class="relative z-20 -mt-[300px]">
+    <div class="max-w-[1500px] mx-auto px-16">
+      <div class="max-w-[1400px]" data-aos="fade-up">
+        <div
+          class="inline-flex items-center rounded-full bg-[#7C5CFF]/15 border border-[#7C5CFF]/30 px-5 py-2 text-[14px] tracking-[2px] uppercase text-[#C8B8FF]"
+        >
+          Blog
+        </div>
+
+        <h1
+          class="mt-8 font-['Anton'] uppercase leading-[0.92] tracking-[-4px] text-[120px] bg-gradient-to-b from-white to-[#7C5CFF] bg-clip-text text-transparent"
+        >
+          {{ page.title }}
+        </h1>
+
+        <div class="mt-6 text-[24px] text-[#C8B8FF]">
+          {{ page.date | date: "%d %B %Y" }}
+        </div>
+
+        {% if page.excerpt %}
+        <p class="mt-8 text-[28px] leading-[1.7] text-[#B7A9CC]">
+          {{ page.excerpt }}
+        </p>
+        {% endif %}
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTICLE -->
+
+  <section class="relative z-30 pt-32 pb-24">
+    <div class="max-w-[900px] mx-auto px-8">
+      <article
+        class="prose prose-invert prose-xl max-w-none prose-headings:text-white prose-headings:font-semibold prose-p:text-[#D8D0EE] prose-p:leading-[2] prose-strong:text-white prose-a:text-[#A98CFF] prose-blockquote:border-l-[#7C5CFF] prose-blockquote:text-[#C8B8FF]"
+      >
+        {{ content }}
+      </article>
+      <div class="mt-24 pt-16 border-t border-[#7C5CFF]/20">
+        <div class="max-w-[700px]">
+          <div class="text-[14px] tracking-[3px] uppercase text-[#A98CFF]">
+            Written By
+          </div>
+
+          <h3 class="mt-4 text-[38px] font-medium text-white">
+            Syed Saquib Ahmad
+          </h3>
+
+          <p class="mt-4 text-[20px] leading-[1.8] text-[#B7A9CC]">
+            Writer, author and tax consultant. Exploring life, books, growth and
+            the beautiful chaos in between.
+          </p>
+        </div>
+      </div>
+      <!-- MORE FROM THE DIARY -->
+
+      <div class="mt-32 text-center">
+        <h2 class="text-[52px] font-semibold text-white">
+          More From The Diary
+        </h2>
+
+        <p class="mt-4 text-[#B7A9CC]">
+          More thoughts, stories and observations.
+        </p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-8 mt-16">
+        {% assign shown = 0 %} {% assign sorted_posts = site.posts | sort:"date"
+        | reverse %} {% for post in sorted_posts %} {% if post.type == "blog"
+        and post.url != page.url and shown < 3 %}
+
+        <a
+          href="{{ post.url | relative_url }}"
+          class="group rounded-[28px] overflow-hidden border border-[#7C5CFF]/15 bg-[#05030B] transition duration-500 hover:-translate-y-2"
+        >
+          <div class="overflow-hidden">
+            <img
+              src="{{ post.featured_image | relative_url }}"
+              alt="{{ post.title }}"
+              class="w-full h-[220px] object-cover transition duration-700 group-hover:scale-105"
+            />
+          </div>
+
+          <div class="p-6 text-left">
+            <div class="text-[13px] uppercase tracking-[2px] text-[#A98CFF]">
+              {{ post.date | date: "%d %b %Y" }}
+            </div>
+
+            <h3 class="mt-3 text-[24px] font-medium text-white">
+              {{ post.title }}
+            </h3>
+
+            <p class="mt-3 text-[#B7A9CC]">{{ post.excerpt }}</p>
+          </div>
+        </a>
+
+        {% assign shown = shown | plus: 1 %} {% endif %} {% endfor %}
+      </div>
+
+      <div class="mt-16 text-center">
+        <a
+          href="{{ '/blogs' | relative_url }}"
+          class="inline-flex items-center rounded-full border border-[#7C5CFF]/30 bg-[#7C5CFF]/10 px-8 py-4 text-[18px] text-white transition duration-300 hover:bg-[#7C5CFF]/20 hover:scale-105"
+        >
+          View More Blogs →
+        </a>
+      </div>
+    </div>
+  </section>
+</div>
+<!-- MOBILE -->
+
+<div class="lg:hidden">
+  <div class="pt-[110px]">
+    <img
+      src="{{ page.featured_image | relative_url }}"
+      alt="{{ page.title }}"
+      class="w-full h-[260px] object-cover"
+    />
+  </div>
+
+  <section class="px-6 pt-10">
+    <h1
+      class="font-['Anton'] uppercase leading-[0.92] text-[54px] tracking-[-2px] bg-gradient-to-b from-white to-[#7C5CFF] bg-clip-text text-transparent"
+    >
+      {{ page.title }}
+    </h1>
+
+    <div class="mt-4 text-[#C8B8FF]">{{ page.date | date: "%d %B %Y" }}</div>
+
+    {% if page.excerpt %}
+    <p class="mt-6 text-[20px] leading-[1.8] text-[#B7A9CC]">
+      {{ page.excerpt }}
+    </p>
+    {% endif %}
+  </section>
+
+  <section class="px-6 pt-12">
+    <article
+      class="prose prose-invert max-w-none prose-p:text-[#D8D0EE] prose-headings:text-white"
+    >
+      {{ content }}
+    </article>
+  </section>
+  <!-- MOBILE AUTHOR -->
+
+  <div class="px-6 mt-16 pt-10 border-t border-[#7C5CFF]/20">
+    <div class="text-[12px] tracking-[3px] uppercase text-[#A98CFF]">
+      Written By
+    </div>
+
+    <h3 class="mt-3 text-[28px] font-medium text-white">Syed Saquib Ahmad</h3>
+
+    <p class="mt-3 text-[#B7A9CC] leading-[1.8]">
+      Writer, author and tax consultant. Exploring life, books, growth and the
+      beautiful chaos in between.
+    </p>
+  </div>
+  <!-- MOBILE MORE FROM THE DIARY -->
+
+  <div class="px-6 mt-20">
+    <h2 class="text-[36px] font-semibold text-white text-center">
+      More From The Diary
+    </h2>
+
+    <p class="mt-3 text-center text-[#B7A9CC]">
+      More thoughts, stories and observations.
+    </p>
+  </div>
+  <div class="px-6 mt-10 space-y-6">
+    {% assign shown = 0 %} {% assign sorted_posts = site.posts | sort:"date" |
+    reverse %} {% for post in sorted_posts %} {% if post.type == "blog" and
+    post.url != page.url and shown < 3 %}
+
+    <a
+      href="{{ post.url | relative_url }}"
+      class="block rounded-[24px] overflow-hidden border border-[#7C5CFF]/15 bg-[#05030B]"
+    >
+      <img
+        src="{{ post.featured_image | relative_url }}"
+        alt="{{ post.title }}"
+        class="w-full h-[200px] object-cover"
+      />
+
+      <div class="p-5">
+        <div class="text-[12px] uppercase tracking-[2px] text-[#A98CFF]">
+          {{ post.date | date: "%d %b %Y" }}
+        </div>
+
+        <h3 class="mt-2 text-[22px] font-medium text-white">
+          {{ post.title }}
+        </h3>
+
+        <p class="mt-2 text-[#B7A9CC]">{{ post.excerpt }}</p>
+      </div>
+    </a>
+
+    {% assign shown = shown | plus: 1 %} {% endif %} {% endfor %}
+  </div>
+  <div class="px-6 mt-10 mb-16 text-center">
+    <a
+      href="{{ '/blogs' | relative_url }}"
+      class="inline-flex items-center rounded-full border border-[#7C5CFF]/30 bg-[#7C5CFF]/10 px-7 py-3 text-white"
+    >
+      View More Blogs →
+    </a>
+  </div>
+</div>

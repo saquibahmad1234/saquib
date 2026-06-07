@@ -3,6 +3,232 @@ layout: default
 title: Blogs
 ---
 
-<section class="pt-40 px-8">
-  <h1 class="text-5xl font-bold mb-10">Blogs</h1>
+<section
+  class="relative overflow-hidden bg-black pt-32 lg:pt-40 pb-24 lg:pb-32"
+>
+  <!-- ATMOSPHERIC GLOW -->
+
+  <div
+    class="absolute left-1/2 top-[35%] w-[1400px] h-[900px] -translate-x-1/2 rounded-full bg-[#6B4DFF]/12 blur-[250px]"
+  ></div>
+
+  <div class="relative z-20 max-w-[1600px] mx-auto px-8 lg:px-16">
+    <div class="grid lg:grid-cols-2 items-center gap-10 lg:gap-20">
+      <!-- CHARACTER -->
+
+      <div class="relative flex justify-center" data-aos="fade-right">
+        <!-- GLOW -->
+
+        <div class="absolute inset-0 flex items-center justify-center z-0">
+          <div
+            class="w-[700px] h-[700px] rounded-full bg-[#6B4DFF]/60 blur-[180px]"
+          ></div>
+        </div>
+
+        <!-- CHARACTER -->
+
+        <img
+          src="{{ '/assets/images/character-blogs.png' | relative_url }}"
+          alt="Blog Character"
+          class="relative z-10 w-[320px] md:w-[480px] lg:w-[620px]"
+          style="
+            mask-image: linear-gradient(
+              to top,
+              transparent 0%,
+              rgba(0, 0, 0, 0.25) 6%,
+              rgba(0, 0, 0, 0.7) 14%,
+              black 24%
+            );
+
+            -webkit-mask-image: linear-gradient(
+              to top,
+              transparent 0%,
+              rgba(0, 0, 0, 0.25) 6%,
+              rgba(0, 0, 0, 0.7) 14%,
+              black 24%
+            );
+          "
+        />
+      </div>
+
+      <!-- CONTENT -->
+
+      <div class="text-center lg:text-left" data-aos="fade-left">
+        <!-- LABEL -->
+
+        <div
+          class="inline-flex items-center rounded-full bg-[#7C5CFF]/15 border border-[#7C5CFF]/30 px-5 py-2 text-[14px] tracking-[2px] uppercase text-[#C8B8FF]"
+        >
+          Blogs
+        </div>
+
+        <!-- TITLE -->
+
+        <h1
+          data-aos="fade-left"
+          class="mt-8 font-['Anton'] uppercase leading-[0.95] tracking-[-2px] text-[72px] md:text-[110px] lg:text-[115px] bg-gradient-to-b from-white to-[#7C5CFF] bg-clip-text text-transparent"
+        >
+          <span class="block">WELCOME TO MY</span>
+          <span class="block">PERSONAL DIARY</span>
+        </h1>
+
+        <div
+          class="flex items-center gap-6 mt-8"
+          data-aos="fade-up"
+          data-aos-delay="100"
+        >
+          <div class="flex-1 h-px bg-[#7C5CFF]/40"></div>
+
+          <div class="text-[34px] text-[#A98CFF]">✦</div>
+
+          <div class="flex-1 h-px bg-[#7C5CFF]/40"></div>
+        </div>
+
+        <!-- DESCRIPTION -->
+
+        <p
+          data-aos="fade-up"
+          data-aos-delay="200"
+          class="mt-8 text-[20px] md:text-[24px] leading-[1.8] text-[#B7A9CC] max-w-[650px]"
+        >
+          Here I write about life, books, growth, heartbreak, hope and all the
+          beautiful chaos in between.
+        </p>
+
+        <!-- LATEST THOUGHT -->
+
+        <div
+          class="mt-12 border-l-2 border-[#7C5CFF]/50 pl-6"
+          data-aos="fade-up"
+          data-aos-delay="200"
+        >
+          <div class="text-[13px] uppercase tracking-[2px] text-[#C8B8FF]">
+            Latest Thought
+          </div>
+
+          <p
+            class="mt-4 text-[22px] md:text-[28px] leading-[1.7] text-white italic"
+          >
+            “Sometimes the hardest thing isn't letting go. It's accepting that
+            you have to.”
+          </p>
+
+          <div class="mt-4 text-[#B7A9CC]">— Syed Saquib Ahmad</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BOTTOM BLEND -->
+
+  <div
+    class="absolute bottom-0 left-0 w-full h-[160px] pointer-events-none"
+    style="
+      background: linear-gradient(
+        to bottom,
+        transparent 0%,
+        rgba(0, 0, 0, 0.15) 20%,
+        rgba(0, 0, 0, 0.45) 50%,
+        rgba(0, 0, 0, 0.8) 80%,
+        black 100%
+      );
+    "
+  ></div>
+</section>
+
+{% include home/blog-section.html %}
+
+<section class="relative py-24 lg:py-32 overflow-hidden">
+  <div class="max-w-[1600px] mx-auto px-8 lg:px-16">
+    <!-- SECTION HEADER -->
+
+    <div>
+      <div
+        class="inline-flex items-center rounded-full bg-[#7C5CFF]/15 border border-[#7C5CFF]/30 px-5 py-2 text-[14px] tracking-[2px] uppercase text-[#C8B8FF]"
+      >
+        All Blogs
+      </div>
+
+      <h2 class="mt-6 text-[42px] md:text-[60px] leading-[1.05] text-white">
+        Explore the archive.
+      </h2>
+    </div>
+
+    <!-- SEARCH -->
+
+    <div class="mt-12">
+      <div class="relative">
+        <input
+          id="blogSearch"
+          type="text"
+          placeholder="Search thoughts, stories and observations..."
+          class="w-full rounded-[30px] bg-white/[0.04] backdrop-blur-xl border border-[#7C5CFF]/20 px-8 py-6 pr-16 text-[20px] text-white placeholder:text-[#8E7BC5] outline-none transition-all duration-300 focus:border-[#7C5CFF]/60 focus:shadow-[0_0_60px_rgba(124,92,255,0.15)]"
+        />
+
+        <svg
+          class="absolute right-8 top-1/2 -translate-y-1/2 w-6 h-6 text-[#8E7BC5]"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+        >
+          <circle cx="11" cy="11" r="8"></circle>
+          <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+        </svg>
+      </div>
+    </div>
+
+    <!-- POSTS -->
+
+    {% assign blog_posts = site.posts | where: "type", "blog" | sort: "date" |
+    reverse %}
+
+    <div id="blogGrid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mt-14">
+      {% for post in blog_posts %}
+
+      <a
+        href="{{ post.url | relative_url }}"
+        class="blog-card group relative overflow-hidden rounded-[30px]"
+        data-title="{{ post.title | downcase }}"
+        data-excerpt="{{ post.excerpt | downcase }}"
+        data-aos="fade-up"
+        data-aos-delay="{{ forloop.index0 | modulo:3 | times:100 }}"
+      >
+        <!-- IMAGE -->
+
+        <div class="relative h-[380px] overflow-hidden">
+          <img
+            src="{{ post.featured_image }}"
+            alt="{{ post.title }}"
+            class="w-full h-full object-cover transition duration-700 group-hover:scale-110"
+          />
+
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-transparent"
+          ></div>
+
+          <div class="absolute bottom-0 left-0 p-6">
+            <div class="text-[#C8B8FF] text-[14px]">
+              {{ post.date | date: "%d %b %Y" }}
+            </div>
+
+            <h3 class="mt-2 text-[28px] leading-tight text-white max-w-[260px]">
+              {{ post.title }}
+            </h3>
+          </div>
+        </div>
+      </a>
+
+      {% endfor %}
+    </div>
+
+    <!-- EMPTY STATE -->
+
+    <div
+      id="searchEmpty"
+      class="hidden text-center mt-16 text-[#B7A9CC] text-[20px]"
+    >
+      No blog posts matched your search.
+    </div>
+  </div>
 </section>

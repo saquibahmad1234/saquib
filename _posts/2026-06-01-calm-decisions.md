@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: blog-post
 
 title: "Why Calm Decisions Matter More Than Clever Ones"
 

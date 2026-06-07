@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: blog-post
 
 title: "The Loneliness of Ambition"
 
