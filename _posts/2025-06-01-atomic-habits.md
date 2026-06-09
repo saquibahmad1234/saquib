@@ -18,6 +18,12 @@ featured: true
 featured_note: "A practical guide that changed the way I think about consistency, discipline and personal growth."
 
 excerpt: "Tiny improvements, repeated daily, compound into extraordinary results."
+
+genre: "Self Improvement"
+
+summary: >
+  Atomic Habits explores how small, repeated actions compound over time
+  and ultimately shape identity...
 ---
 
 ## Why I Picked This Book

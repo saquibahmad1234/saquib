@@ -1,0 +1,157 @@
+---
+layout: default
+---
+
+<section class="pt-[140px] pb-24">
+  <div class="max-w-[1400px] mx-auto px-6 lg:px-12">
+    ```
+    <!-- HERO -->
+
+    <div class="grid lg:grid-cols-[380px_1fr] gap-12 lg:gap-20 items-start">
+      <!-- BOOK COVER -->
+
+      <div data-aos="fade-right">
+        <img
+          src="{{ page.book_cover | relative_url }}"
+          alt="{{ page.title }}"
+          class="w-full rounded-[24px] shadow-[0_30px_80px_rgba(0,0,0,0.5)]"
+        />
+      </div>
+
+      <!-- DETAILS -->
+
+      <div data-aos="fade-left">
+        <div
+          class="inline-flex items-center rounded-full bg-[#7C5CFF]/15 border border-[#7C5CFF]/30 px-5 py-2 text-[14px] tracking-[2px] uppercase text-[#C8B8FF]"
+        >
+          Book Review
+        </div>
+
+        <h1
+          class="mt-8 text-[56px] lg:text-[88px] leading-[0.95] tracking-[-2px] font-['Cormorant_Garamond'] text-white"
+        >
+          {{ page.title }}
+        </h1>
+
+        <div class="mt-6 text-[26px] text-[#C8B8FF]">{{ page.author }}</div>
+
+        <div class="mt-4 text-[18px] text-[#A98CFF]">{{ page.genre }}</div>
+
+        <!-- STARS -->
+
+        <div class="mt-8 flex gap-2 text-[30px] text-[#FFD56A]">
+          {% assign rating = page.rating | plus: 0 %} {% for i in (1..5) %} {%
+          if i <= rating %}
+          <span>★</span>
+          {% else %}
+          <span class="text-white/20">★</span>
+          {% endif %} {% endfor %}
+        </div>
+
+        {% if page.excerpt %}
+        <p class="mt-8 max-w-[700px] text-[22px] leading-[1.8] text-[#B7A9CC]">
+          {{ page.excerpt }}
+        </p>
+        {% endif %}
+      </div>
+    </div>
+    ```
+  </div>
+</section>
+
+<!-- SUMMARY -->
+
+{% if page.summary %}
+
+<section class="py-20">
+  <div class="max-w-[900px] mx-auto px-6">
+    ```
+    <h2
+      class="text-[42px] lg:text-[56px] font-['Cormorant_Garamond'] text-white"
+    >
+      Summary
+    </h2>
+
+    <div class="mt-8 text-[20px] leading-[2] text-[#D8D0EE]">
+      {{ page.summary | markdownify }}
+    </div>
+    ```
+  </div>
+</section>
+
+{% endif %}
+
+<!-- REVIEW -->
+
+<section class="py-12">
+  <div class="max-w-[900px] mx-auto px-6">
+    ```
+    <h2
+      class="text-[42px] lg:text-[56px] font-['Cormorant_Garamond'] text-white"
+    >
+      Review
+    </h2>
+
+    <article
+      class="mt-10 prose prose-invert prose-xl max-w-none prose-headings:text-white prose-headings:font-semibold prose-p:text-[#D8D0EE] prose-p:leading-[2] prose-strong:text-white prose-a:text-[#A98CFF] prose-blockquote:border-l-[#7C5CFF] prose-blockquote:text-[#C8B8FF]"
+    >
+      {{ content }}
+    </article>
+    ```
+  </div>
+</section>
+
+<!-- MORE REVIEWS -->
+
+<section class="py-32">
+  <div class="max-w-[1600px] mx-auto px-6 lg:px-12">
+    ```
+    <div class="text-center">
+      <h2 class="text-[48px] text-white">More Reviews</h2>
+
+      <p class="mt-4 text-[#B7A9CC]">
+        Discover more books from my reading journey.
+      </p>
+    </div>
+
+    {% assign shown = 0 %} {% assign books = site.posts | sort:"date" | reverse
+    %}
+
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6 mt-16">
+      {% for post in books %} {% if post.type == "book-review" and post.url !=
+      page.url and shown < 5 %}
+
+      <a href="{{ post.url | relative_url }}" class="group">
+        <div class="relative overflow-hidden rounded-[22px]">
+          <img
+            src="{{ post.book_cover | relative_url }}"
+            alt="{{ post.title }}"
+            class="w-full aspect-[2/3] object-cover transition duration-700 group-hover:scale-105"
+          />
+
+          <div
+            class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-black via-black/80 to-transparent"
+          ></div>
+
+          <div class="absolute bottom-4 left-4 right-4">
+            <h3 class="text-white text-[18px] font-medium">{{ post.title }}</h3>
+
+            <div class="text-[#A98CFF] text-sm">{{ post.author }}</div>
+          </div>
+        </div>
+      </a>
+
+      {% assign shown = shown | plus: 1 %} {% endif %} {% endfor %}
+    </div>
+
+    <div class="mt-16 text-center">
+      <a
+        href="{{ '/books' | relative_url }}"
+        class="inline-flex items-center rounded-full border border-[#7C5CFF]/30 bg-[#7C5CFF]/10 px-8 py-4 text-[18px] text-white transition duration-300 hover:bg-[#7C5CFF]/20"
+      >
+        Explore All Reviews →
+      </a>
+    </div>
+    ```
+  </div>
+</section>
