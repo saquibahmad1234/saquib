@@ -2,7 +2,6 @@
 layout: book-review
 
 title: "Atomic Habits"
-
 date: 2026-06-01
 
 type: book-review
@@ -11,7 +10,9 @@ rating: 5
 
 author: "James Clear"
 
-book_cover: /assets/images/books/atomic-habits.jpg
+book_cover: "/assets/images/books/atomic-habits.jpg"
+
+genre: "Self Improvement"
 
 featured: true
 
@@ -19,11 +20,10 @@ featured_note: "A practical guide that changed the way I think about consistency
 
 excerpt: "Tiny improvements, repeated daily, compound into extraordinary results."
 
-genre: "Self Improvement"
+summary: |
+  Atomic Habits explores how small, repeated actions compound over time and ultimately shape identity.
 
-summary: >
-  Atomic Habits explores how small, repeated actions compound over time
-  and ultimately shape identity...
+  Rather than focusing on motivation, James Clear focuses on systems. The book explains how habits are formed, how they can be improved, and how tiny changes can produce remarkable results over long periods of time.
 ---
 
 ## Why I Picked This Book
