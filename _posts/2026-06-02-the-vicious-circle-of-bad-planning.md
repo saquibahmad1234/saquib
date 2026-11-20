@@ -1,7 +1,7 @@
 ---
 layout: blog-post
 
-title: "The Vicious Circle of Credit"
+title: "The Vicious Circle of Bad Planning"
 
 date: 2026-06-01
 
